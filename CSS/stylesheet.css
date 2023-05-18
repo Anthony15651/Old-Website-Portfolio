@@ -1,0 +1,237 @@
+/***** GENERAL STYLING *****/
+body {
+    margin: 0%; /* Ensures display goes to end of browser screen */
+}
+
+h1 {
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.portfolio-name {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-shadow: 0px 0px 5px red;
+}
+
+p {
+    font-family: Georgia, serif;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+a {
+    color: blue;
+}
+
+q {
+    font-style: italic;
+    padding: 10px 10px;
+}
+
+img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: 340px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img:hover {
+    transition: .5s;
+    transform: scale(1.1);
+}
+
+footer {
+    padding: 2%;
+    background-color: white;
+}
+
+.larger {
+    font-size: larger;
+}
+
+
+/***** END GENERAL STYLING *****/
+
+/***** MEDIA QUERIES *****/
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar a{
+        width: 25%;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #video {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .column-1 {
+        overflow: auto;
+    }
+}
+
+/***** END MEDIA QUERIES *****/
+
+/***** NAVBAR STYLING *****/
+.navbar {
+    text-align: center;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    webkit-animation: moveNav 1s;
+    animation: moveNav 1s;
+}
+
+@keyframes moveNav {
+    from {left: 100vw;}
+    to {left: 0vw;}
+}
+
+.navbar a {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+    font-size: 1.1em;
+    webkit-animation: moveText 1.5s;
+    animation: moveText 1.5s;
+    font-weight: 900;
+}
+
+@keyframes moveText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: black;
+    font-weight: 900;
+}
+
+/***** END NAVBAR STYLING *****/
+
+/***** VIDEO STYLING *****/
+#video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+.video-text {
+    background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
+    color: white;
+    text-shadow: 0px 0px 5px gray;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    -webkit-animation: moveVideoText 1.5s;
+    animation: moveVideoText 1.5s;
+}
+
+@keyframes moveVideoText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+/***** END VIDEO STYLING *****/
+
+/***** TABLE STYLING *****/
+* {
+    box-sizing: border-box;
+}
+
+.column-1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3%;
+    height: 400px;
+    background-color: lightyellow;
+}
+
+.column-2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1.9%;
+    height: 400px;
+    background-color: lightskyblue;
+}
+
+.column-tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+.row:after {
+	content: "";
+    display: table;
+    clear: both;
+}
+
+/***** END TABLE STYLING *****/
+
+/***** CONTACT FORM STYLING *****/
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: Georgia, serif;
+}
+
+input[type=text]:hover {
+    box-shadow: 0 0 5px black inset;
+}
+
+input[type=submit] {
+    display: block;
+    background-color: lightskyblue;
+    padding: 12px 20px;
+    margin-right: auto;
+    margin-left: auto;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type=submit]:hover {
+    background-color: #2596BE;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+}

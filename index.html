@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- HEAD -->
+    <head>
+        <title>Anthony Garcia's Portfolio</title>
+        <meta charset="UTF-8">
+        <link rel="icon" href="./Images/favicon.ico">
+        <meta name="viewport" width="width=device-width">
+        <link rel="stylesheet" type="text/css" href="./CSS/stylesheet.css">
+    </head>
+    <!-- END HEAD -->
+
+    <!-- BODY -->
+    <body>
+
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#github">GitHub</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <!-- END NAVBAR -->
+
+        <!-- BACKGROUND VIDEO -->
+        <div id="home">
+            <video autoplay muted loop id="video">
+                <source src="./Images/video.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <!-- END BACKGROUND VIDEO -->
+
+        <!-- VIDEO TEXT -->
+        <div class="video-text">
+            <h1 class="portfolio-name">Anthony Garcia's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>Most good programmers do programming not because they expect to get paid
+                        <br>or get adulation by the public, but because it is fun to program.</q>
+                    <br>- Linus Torvalds
+                    <br>
+                    <br><span class=larger>Welcome to my portfolio website. Thank you for stopping by.</span>
+                </p>
+            </strong>
+        </div>
+        <!-- END VIDEO TEXT -->
+
+        <!-- ABOUT SECTION -->
+        <div class="row" id="about">
+            <!-- LEFT COLUMN -->
+            <div class="column-2">
+                <a href="#about"><img src="./Images/about.jpg" alt="About image"></a>
+            </div>
+            <!-- RIGHT COLUMN -->
+            <div class="column-1">
+                <h1>About</h1>
+                <p class="center larger">
+                    I am a software developer who loves to code and work with a team!
+                    <br>
+                    <br>I am currently a student of <a href="https://learncodinganywhere.com" target="_blank">The Tech Academy's</a> Software Development Bootcamp.
+                    <br>
+                    <br>I am a full stack developer, and would love to work with you on a project.
+                    <br>
+                    <br>Feel free to <a href="#contact">contact</a> me below:
+                </p>
+            </div>
+        </div>
+        <!-- END ABOUT SECTION -->
+
+        <!-- GITHUB SECTION -->
+        <div class="row" id="github">
+            <!-- LEFT COLUMN -->
+            <div class="column-1">
+                <h1>GitHub</h1>
+                <p class="center larger">
+                    <br>
+                    <br>
+                    You can see my coding projects on from my GitHub account:
+                    <br>
+                    <br>
+                    <a href="https://github.com/Anthony15651" target="_blank">Anthony's GitHub</a>
+                </p>
+            </div>
+            <!-- RIGHT COLUMN -->
+            <div class="column-2">
+                <a href="https://github.com/Anthony15651" target="_blank"><img src="./Images/github.png" alt="GitHub image"></a>
+            </div>
+        </div>
+        <!-- END GITHUB SECTION -->
+
+        <!-- CONTACT SECTION -->
+        <div class="row" id="contact">
+            <!-- LEFT COLUMN -->
+            <div class="column-2 column-tall">
+                <a href="#contact"><img src="./Images/contact.jpg" alt="Contact image"></a>
+            </div>
+            <!-- RIGHT COLUMN -->
+            <div class="column-1 column-tall">
+                <h1>Contact</h1>
+                <!-- CONTACT FORM -->
+                <form action="https://formspree.io/f/mlekvzqr" method="POST">
+                    <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="FirstName LastName">
+                    <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" placeholder="you@example.com">
+                    <label for="message">Message:</label>
+                        <input type="text" id="message" name="message" placeholder="Enter message here">
+                        <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <!-- END CONTACT SECTION -->
+
+        <!-- FOOTER -->
+        <footer>
+            <p>
+                <p class="center">&copy; Prosper Consulting Inc., <a href="https://learncodinganywhere.com" target="_blank">The Tech Academy</a></p>
+                <br>
+            </p>
+        </footer>
+        <!-- END FOOTER -->
+
+    </body>
+</html>
+
