@@ -1,0 +1,471 @@
+/***** GENERAL STYLING *****/
+html {
+    scroll-behavior: smooth; /* ENSURES PAGE SCROLLING IS SMOOTH */
+}
+
+body {
+    margin: 0%; /* Ensures display goes to end of browser screen */
+    opacity: 1; /* CREATES A FADE IN EFFECT */
+    transition: 3s opacity;
+    letter-spacing: .2vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+    overflow-x: hidden; /* PREVENTS HORIZONTAL SCROLL BAR FROM APPEARING */
+    user-select: none; /* THIS PREVENTS TEXT ON PAGE FROM BEING HIGHLIGHTED BY USER */
+}
+
+body.fade-out {
+    opacity: .1; /* THIS SETS THE LEVEL OF OPACITY AT THE START OF PAGE LOAD */
+}
+
+h1 {
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.portfolio-name {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-shadow: 0px 0px 5px red;
+}
+
+p {
+    font-family: Georgia, serif;
+    text-align: justify;
+    letter-spacing: .1vw;
+    font-size: 2.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.center {
+    text-align: center;
+}
+
+a {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+q {
+    font-style: italic;
+    padding: .2vw .2vw;
+}
+
+img {
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto auto auto auto;
+}
+
+
+footer {
+    padding: 2%;
+    background-color: white;
+}
+
+.larger {
+    font-size: larger;
+}
+
+
+/***** END GENERAL STYLING *****/
+
+/***** MEDIA QUERIES *****/
+@media screen and (max-width: 527px) {
+    p {
+        font-size: 3.75vw;
+    }
+}
+
+@media screen and (min-width: 528px) and (max-width: 660px) {
+    p {
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (min-width: 661px) and (max-width: 799px) {
+    p {
+        font-size: 2.75vw;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 924px) {
+    p {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width: 925px) and (max-width: 1050px) {
+    p {
+        font-size: 2.25vw;
+    }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1310px) {
+    p {
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width: 1311px) and (max-width: 1535px) {
+    p {
+        font-size: 1.75vw;
+    }
+}
+
+@media screen and (min-width: 1536px) and (max-width: 2269px) {
+    p {
+        font-size: 1.5vw;
+    }
+}
+
+@media screen and (min-width: 2270px) {
+    p {
+        font-size: 1.35vw;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .navbar a {
+        width: 20%;
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    q {
+        font-size: 3.5vw;
+    }
+
+    .portfolio-name {
+        font-size: 4.5vw;
+    }
+}
+
+@media screen and (min-width: 1725px) {
+    .column-1 {
+        height: 550px;
+    }
+    .column-2 {
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    h1 {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #video {
+        display: none;
+    }
+}
+
+/***** END MEDIA QUERIES *****/
+
+/***** NAVBAR STYLING *****/
+.navbar {
+    text-align: center;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-animation: moveNav 1s;
+    animation: moveNav 1s;
+}
+
+@keyframes moveNav {
+    from {left: 100vw;}
+    to {left: 0vw;}
+}
+
+.navbar a {
+    float: left;
+    text-align: center;
+    color: white;
+    padding: .75vw 1vw;
+    text-decoration: none;
+    position: relative;
+    font-size: 1.5vw;
+    -webkit-animation: moveText 1.5s;
+    animation: moveText 1.5s;
+    font-weight: 900;
+}
+
+@keyframes moveText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    cursor: pointer;
+    transition: .1s ease-in;
+}
+
+/***** END NAVBAR STYLING *****/
+
+/***** VIDEO STYLING *****/
+#video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    z-index: -1;
+}
+
+.video-text {
+    background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
+    color: white;
+    text-shadow: 0px 0px 5px gray;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    -webkit-animation: moveVideoText 1.5s;
+    animation: moveVideoText 1.5s;
+}
+
+@keyframes moveVideoText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+/***** END VIDEO STYLING *****/
+
+/***** SLIDESHOW STYLING *****/
+#slideshow-background {
+    background: rgba(255,255,255,.35);
+}
+
+.mySlides {
+    display: none;
+}
+
+#slideshow-container {
+    width: 39.5vw; /* Relative sizing of the contianer to 39.5% viewport width */
+    height: auto; /* Height is automatically adjusted based on width */
+    padding-top: 4%;
+    position: relative; /* Container is relative to it's normal positioning */
+    margin: auto; /* This will horizontally center */
+}
+
+#slideshow-container a {
+    text-decoration: none;
+}
+
+.slideshow-images {
+    vertical-align: middle; /* This centers the images vertically within the slideshow container */
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0,0,0,.75);
+    width: 100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    color: darkgrey;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,.8);
+    color: white;
+}
+
+.text {
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    background-color: rgba(0,0,0,.75);
+    font-weight: bold;
+    border-radius: 0px 0px 7px 7px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    z-index: -1;
+}
+
+.active, .dot:hover {
+    background-color: black;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4;}
+    to {opacity: 1;}
+}
+
+@keyframes fade {
+    from {opacity: .4;}
+    to {opacity: 1;}
+}
+
+/***** END SLIDESHOW STYLING *****/
+
+/***** TABLE STYLING *****/
+* {
+    box-sizing: border-box;
+}
+
+.column-1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: .5%;
+    height: 400px;
+    background-color: lightyellow;
+}
+
+.column-2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: .5%;
+    height: 400px;
+    background-color: lightskyblue;
+}
+
+.column-tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+.row:after {
+	content: "";
+    display: table;
+    clear: both;
+}
+
+/***** END TABLE STYLING *****/
+
+/***** CONTACT FORM STYLING *****/
+.pop-up-button {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color: white;
+    color: black;
+    border: solid black;
+    cursor: pointer;
+    -webkit-animation: movePopup 1s;
+    animation: movePopup 1s;
+    border-radius: 5px;
+}
+
+@keyframes movePopup {
+    from {right: -40vw;}
+    to {right: 1.75vw;}
+}
+
+@-webkit-keyframes movePopup {
+    from {right: -40vw;}
+    to {right: 1.75vw;}
+}
+
+.form-popup {
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: .1vw;
+    right: .1vw;
+}
+
+.form-container {
+    max-width: 40vw;
+    padding: 1vw;
+    background-color: #f1f1f1;
+    border: 2px solid black;
+}
+
+.form-container input[type=text] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: none;
+    background: gainsboro;
+    font-size: 1vw;
+    font-family: Georgia, serif;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+button {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: .3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+button:hover, .form-container .btn:hover {
+    color: white;
+    background-color: black;
+    transition-duration: .1s;
+    -webkit-transition-duration: .1s;
+    border-color: silver;
+}
+
+.form-container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh;
+}
+
+.form-container .cancel:hover {
+    color: white;
+    background-color: darkred;
+    transition-duration: .1s;
+    -webkit-transition-duration: .1s;
+    border-color: black;
+}
