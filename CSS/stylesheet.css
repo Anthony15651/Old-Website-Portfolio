@@ -181,7 +181,7 @@ footer {
     top: 0;
     width: 100%;
     z-index: 1;
-    webkit-animation: moveNav 1s;
+    -webkit-animation: moveNav 1s;
     animation: moveNav 1s;
 }
 
@@ -198,7 +198,7 @@ footer {
     text-decoration: none;
     position: relative;
     font-size: 1.5vw;
-    webkit-animation: moveText 1.5s;
+    -webkit-animation: moveText 1.5s;
     animation: moveText 1.5s;
     font-weight: 900;
 }
@@ -335,7 +335,7 @@ footer {
     -webkit-animation-duration: 1.5s;
 }
 
-@-webkit-keyframes-fade {
+@-webkit-keyframes fade {
     from {opacity: .4;}
     to {opacity: 1;}
 }
