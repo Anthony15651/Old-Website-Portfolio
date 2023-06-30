@@ -74,6 +74,19 @@ footer {
     font-size: larger;
 }
 
+ul {
+    list-style: none;
+}
+
+li {
+    text-align: center;
+    font-family: Georgia, serif;
+    letter-spacing: .1vw;
+    font-size: 2vw;
+}
+
+
+
 
 /***** END GENERAL STYLING *****/
 
