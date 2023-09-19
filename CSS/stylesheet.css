@@ -88,9 +88,11 @@ li {
     text-align: center;
 }
 
-
-
-
+.clean {
+    padding: 5px 8px;
+    text-align: center;
+    letter-spacing: .01em;
+}
 /***** END GENERAL STYLING *****/
 
 /***** MEDIA QUERIES *****/
